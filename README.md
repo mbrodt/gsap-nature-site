@@ -1,7 +1,8 @@
-# Vue 3 + Vite
+# Gsap Nature Site
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This repo contains the initial markup for a Vue 3 + Gsap tutorial.
 
-## Recommended IDE Setup
+To get started, clone the repo and cd into the correct folder.
+Then, run `npm install` followed by `npm run dev`. Finally, open up `localhost:3000`.
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+The full code (including animations) is available in the `with-animations` branch if you get stuck along the way 👍
