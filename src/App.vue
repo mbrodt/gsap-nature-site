@@ -1,4 +1,108 @@
-<script setup></script>
+<script setup>
+import gsap from "gsap";
+import { onMounted } from "vue";
+
+onMounted(() => {
+  gsap.fromTo(
+    "#heading",
+    {
+      opacity: 0,
+      x: "-100%",
+    },
+    {
+      duration: 1.5,
+      opacity: 1,
+      ease: "power3.inOut",
+      x: 0,
+    }
+  );
+  gsap.fromTo(
+    "#description",
+    {
+      opacity: 0,
+      x: "-100%",
+    },
+    {
+      duration: 1.5,
+      opacity: 1,
+      x: 0,
+      ease: "power3.inOut",
+      delay: 0.5,
+    }
+  );
+  gsap.fromTo(
+    ".main-btn",
+    {
+      opacity: 0,
+      y: "100%",
+    },
+    {
+      duration: 1.5,
+      opacity: 1,
+      y: 0,
+      delay: 1.3,
+      ease: "power3.inOut",
+      stagger: 0.1,
+    }
+  );
+  gsap.fromTo(
+    "#downArrow",
+    {
+      opacity: 0,
+      y: "100%",
+    },
+    {
+      duration: 1.5,
+      opacity: 1,
+      delay: 2,
+      y: 0,
+      ease: "power3.inOut",
+      onComplete: () => {
+        gsap.to("#downArrow", {
+          y: 50,
+          duration: 2,
+          ease: "sine.easeInOut",
+          repeat: -1,
+          yoyo: true,
+        });
+      },
+    }
+  );
+  gsap.fromTo(
+    "#imageLeft",
+    {
+      opacity: 0,
+      y: 100,
+      rotation: 10,
+    },
+    {
+      duration: 1.5,
+      opacity: 1,
+      y: 0,
+      rotation: -3,
+      ease: "power3.inOut",
+      delay: 2.5,
+    }
+  );
+  gsap.fromTo(
+    "#imageRight",
+    {
+      transformOrigin: "bottom right",
+      rotation: 20,
+      opacity: 0,
+      y: -100,
+    },
+    {
+      duration: 1.5,
+      opacity: 1,
+      y: 0,
+      rotation: 3,
+      ease: "power3.inOut",
+      delay: 3,
+    }
+  );
+});
+</script>
 
 <template>
   <div class="flex w-screen min-h-screen">
